@@ -15,15 +15,15 @@ btn.addEventListener('click' , function(){
     let numeroCelle = 0
     let numeroElementi = 0
     if (scelta.value == 'facile'){
-        numeroCelle = 49
-        numeroElementi = 7
+        numeroCelle = 100
+        numeroElementi = 10
     } else if 
         (scelta.value == 'medio'){
         numeroCelle = 81
         numeroElementi = 9
     }else if (scelta.value == 'difficile') {
-        numeroCelle = 100
-        numeroElementi = 10
+        numeroCelle = 49
+        numeroElementi = 7
     }
     for(let i = 1; i <= numeroCelle; i++){
         const square = document.createElement('div')
