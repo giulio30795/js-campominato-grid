@@ -26,8 +26,7 @@ btn.addEventListener('click' , function(){
         numeroElementi = 7
     }
     for(let i = 1; i <= numeroCelle; i++){
-        const square = document.createElement('div')
-        square.classList.add('square')
+        const square = DivGenerator()
         container.append(square)
         square.style.width=`calc(100% / ${numeroElementi})`
         let number = i
@@ -39,3 +38,11 @@ btn.addEventListener('click' , function(){
         })
     }
 })
+
+// Funzioni
+function DivGenerator (){
+const square = document.createElement('div')
+square.classList.add('square')
+
+return square
+}
