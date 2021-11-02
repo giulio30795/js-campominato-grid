@@ -5,35 +5,37 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-const container = document.querySelector('.grid-container')
+let container = document.querySelector('.grid-container')
 const btn = document. querySelector('.btn')
 const scelta = document.getElementById('difficoltà')
 
-console.log(scelta);
 
 btn.addEventListener('click' , function(){
+        container.innerHTML =''
     let numeroCelle = 0
-    if (scelta.value = 'facile'){
+    let numeroElementi = 0
+    if (scelta.value == 'facile'){
         numeroCelle = 49
+        numeroElementi = 7
     } else if 
-        (scelta.value = 'medio'){
-            numeroCelle = 81
-    }else if (scelta.value = 'difficile') {
+        (scelta.value == 'medio'){
+        numeroCelle = 81
+        numeroElementi = 9
+    }else if (scelta.value == 'difficile') {
         numeroCelle = 100
+        numeroElementi = 10
     }
-
-    for(let i = 0; i < numeroCelle; i++){
+    for(let i = 1; i <= numeroCelle; i++){
         const square = document.createElement('div')
-        square.classList.add('.square')
+        square.classList.add('square')
+        container.append(square)
+        square.style.width=`calc(100% / ${numeroElementi})`
+        let number = i
+        const span = document.createElement('span')
+        span.innerHTML+= number
+        square.append(span)
+        square.addEventListener('click', function(){
+            square.classList.add('clicked')
+        })
     }
-    
 })
-
-
-
-
-
-
-
-// Funzioni
-

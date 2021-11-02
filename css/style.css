@@ -57,7 +57,11 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    cursor: pointer;
+}
+
+.square.clicked{
+    background-color: dodgerblue;
 }
 
 /* Footer */
